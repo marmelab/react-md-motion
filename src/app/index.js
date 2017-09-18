@@ -10,7 +10,6 @@ import './index.css';
 
 class App extends Component {
     previousView = this.props.location
-    
     previousLocation = this.props.location
 
     componentWillUpdate(nextProps) {
@@ -18,11 +17,15 @@ class App extends Component {
         this.previousLocation = this.props.location;
     }
 
+
     render() {
-        const {location} = this.props;
-        const { state } = location.state ? location : this.previousView;
-        const modal = false;
+        const { location } = this.props;
+        const modal = location.state && location.state.to === 'modal';
+
         let pos = {};
+        if(modal){
+            pos = location.state.meta.from;
+        }
 
         return (
             <div className="App">
@@ -42,6 +45,5 @@ class App extends Component {
         );
     }
 }
-    // <Route path="/recipe/:id" component={Recipe} />
 
 export default withRouter(App);

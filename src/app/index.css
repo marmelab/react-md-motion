@@ -1,3 +1,22 @@
 body {
     margin: 0;
 }
+
+
+.modal-container{
+    position:fixed;
+    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1);
+    overflow: hidden;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: white;
+    z-index: 1200;
+}
+
+.modal-container:empty{
+    display:none;
+}
