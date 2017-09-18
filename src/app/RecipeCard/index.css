@@ -1,0 +1,17 @@
+.recipe {
+    margin: 16px;
+}
+
+.recipe .title img {
+    float: left;
+    margin: 16px;
+    width: 52px;
+}
+
+.recipe .header img {
+    width: 100%;
+}
+
+.recipe .header button#back-button {
+    position: absolute !important;
+}

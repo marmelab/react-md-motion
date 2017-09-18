@@ -1,0 +1,11 @@
+.header .logo {
+    background-image: url('https://gstatic.com/angular/material-adaptive/pesto/logo_all.svg');
+    background-repeat: no-repeat;
+    background-position:center -130px;
+    background-size: 200px;
+    height: 100%;
+}
+
+.header .logo > img {
+    width: 100%;
+}
