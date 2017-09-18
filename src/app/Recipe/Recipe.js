@@ -5,5 +5,5 @@ import RecipeCard from '../RecipeCard'
 import './style.css';
 
 export default ({recipe, goBack}) => (
-    <RecipeCard recipe={recipe} goBack={goBack} expanded/>
+    <RecipeCard recipe={recipe} goBack={goBack} showActions expanded/>
 );

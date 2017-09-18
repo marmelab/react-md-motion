@@ -8,6 +8,18 @@
     width: 100%;
 }
 
-.recipe .header button#back-button {
+.recipe .header .actions {
     position: absolute !important;
+    display:flex;
+}
+
+.recipe .header .actions.right{
+    right: 0;
+}
+
+.recipe .header .floating{
+    position: absolute !important;
+    display:flex;
+    right: 25px;
+    bottom: -25px;
 }
