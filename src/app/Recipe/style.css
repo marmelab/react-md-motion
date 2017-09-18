@@ -1,4 +1,3 @@
-.modal-container .recipe {
-    margin: 0;
-    box-shadow: none !important;
+.recipe{
+    height: 100%;
 }
