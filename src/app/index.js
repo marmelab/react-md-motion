@@ -7,7 +7,7 @@ import Header from './Header';
 import Home from './Home';
 import Recipe from './Recipe';
 
-import './index.css';
+import './style.css';
 
 class CSSTransition extends OriginalCSSTransition {
     onEntered = () => {
@@ -36,7 +36,7 @@ class App extends Component {
         return (
             <div className="App">
                 <Header/>
-                <div className="">
+                <div className="view-container">
                     <Switch location={modal ? this.previousView : location}>
                         <Route exact path="/" component={Home} />
                     </Switch>

@@ -8,9 +8,9 @@ import BackIcon from 'material-ui/svg-icons/hardware/keyboard-arrow-left';
 import TimerIcon from 'material-ui/svg-icons/image/timer';
 import ShareIcon from 'material-ui/svg-icons/social/share';
 import MoreIcon from 'material-ui/svg-icons/navigation/more-vert';
-import LikeIcon from 'material-ui/svg-icons/action/favorite';
+import LikeIcon from 'material-ui/svg-icons/action/favorite-border';
 
-import './index.css';
+import './style.css';
 
 const styles = {
     actions:{
@@ -90,9 +90,21 @@ export default ({
             <CardTitle title={recipe.name} subtitle={recipe.author} />
         </div>
         {expanded &&
-        <CardText>
-            {recipe.description}
-        </CardText>
+            <div className="actions">
+                <CardText className="text">
+                    {recipe.description}
+                </CardText>
+                {recipe.ingredients.map((ingredient)=>(
+                    <div className="ingredient">
+                        <div className="amount">
+                            {ingredient.amount}
+                        </div>
+                        <div className="description">
+                            {ingredient.description}
+                        </div>
+                    </div>
+                ))}
+            </div>
         }
     </Card>
 );

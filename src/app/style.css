@@ -2,6 +2,9 @@ body {
     margin: 0;
 }
 
+.view-container{
+    padding-top: 64px;
+}
 
 .modal-container{
     position:fixed;

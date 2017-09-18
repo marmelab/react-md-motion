@@ -10,6 +10,9 @@ import './index.css';
 export default () => (
     <AppBar
         className="header"
+        style={{
+            position: 'fixed',
+        }}
         title={
             <div className="logo"></div>
         }
