@@ -23,6 +23,11 @@ const styles = {
             width: 60,
             height: 60,
         },
+        likeIcon: {
+            width:'43%',
+            height:'43%',
+            color: 'white',
+        },
     },
 };
 
@@ -74,7 +79,7 @@ export default ({
                 {showActions &&
                     <div className="floating">
                         <div className="like">
-                          <LikeIcon style={styles.actions.icon}/>
+                          <LikeIcon style={styles.actions.likeIcon}/>
                         </div>
                     </div>
                 }
