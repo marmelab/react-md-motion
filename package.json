@@ -11,16 +11,9 @@
     "react-scripts": "1.0.13"
   },
   "scripts": {
-    "build-css": "node-less-chokidar src/ -o src/",
-    "watch-css": "npm run build-css && node-less-chokidar src/ -o src/ --watch --recursive",
-    "start-js": "react-scripts start",
-    "start": "npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && react-scripts build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {
-    "node-less-chokidar": "^0.1.2",
-    "npm-run-all": "^4.1.1"
-  }
 }
