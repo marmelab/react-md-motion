@@ -2,33 +2,30 @@ import React from 'react';
 
 import { recipes } from '../data';
 
-export default (Component) => {
-    const Navigation = ({history, recipe, ...rest}) => {
-        let element = null;
+export default (Component) => ({history, recipe, ...rest}) => {
+    let element = null;
 
-        const goToRecipe = () => {
-            const { top, right, bottom, left, width, height } = element.getBoundingClientRect();
+    const goToRecipe = () => {
+        const { top, right, bottom, left, width, height } = element.getBoundingClientRect();
 
-            history.push({
-                pathname: `/recipe/${recipe.id}`,
-                state: {
-                    to: 'modal',
-                    meta: {
-                        from: { top, right, bottom, left, width, height },
-                    },
+        history.push({
+            pathname: `/recipe/${recipe.id}`,
+            state: {
+                to: 'modal',
+                meta: {
+                    from: { top, right, bottom, left, width, height },
                 },
-            });
-        };
-
-        return (
-            <div ref={(el) => { element = el; }}>
-                <Component
-                    recipe={recipe}
-                    onClick={goToRecipe}
-                    {...rest}
-                />
-            </div>
-        );
+            },
+        });
     };
-    return Navigation;
+
+    return (
+        <div ref={(el) => { element = el; }}>
+            <Component
+                recipe={recipe}
+                onClick={goToRecipe}
+                {...rest}
+            />
+        </div>
+    );
 };
