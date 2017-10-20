@@ -7,7 +7,7 @@ import Header from './Header';
 import Home from './Home';
 import Recipe from './Recipe';
 
-import './style.css';
+import './style.less';
 
 class CSSTransition extends OriginalCSSTransition {
     onEntered = () => {

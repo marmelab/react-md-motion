@@ -18,18 +18,18 @@ body {
     width: 100vw;
     background: white;
     z-index: 1200;
-}
 
-.modal-container:empty{
-    display:none;
-}
+    &:empty{
+        display:none;
+    }
 
-.modal-container.modal-enter-active {
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: auto;
+    &.modal-enter-active {
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+        width: 100vw !important;
+        height: 100vh !important;
+        overflow: auto;
+    }
 }

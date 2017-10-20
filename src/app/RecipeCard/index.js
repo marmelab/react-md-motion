@@ -10,7 +10,7 @@ import ShareIcon from 'material-ui/svg-icons/social/share';
 import MoreIcon from 'material-ui/svg-icons/navigation/more-vert';
 import LikeIcon from 'material-ui/svg-icons/action/favorite-border';
 
-import './style.css';
+import './style.less';
 
 const styles = {
     actions:{
@@ -89,18 +89,12 @@ export default ({
             <img src={recipe.ingredientsImageUrl} alt="" />
             <CardTitle
                 title={
-                    <span
-                        className="zoom-font"
-                        zoom-to="32px"
-                    >
+                    <span className="header">
                         {recipe.name}
                     </span>
                 }
                 subtitle={
-                    <span
-                        className="zoom-font"
-                        zoom-to="18px"
-                    >
+                    <span className="sub">
                         {recipe.author}
                     </span>
                 }

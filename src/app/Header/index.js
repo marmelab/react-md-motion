@@ -5,7 +5,7 @@ import IconButton from 'material-ui/IconButton';
 
 import SearchIcon from 'material-ui/svg-icons/action/search';
 
-import './index.css';
+import './index.less';
 
 export default () => (
     <AppBar
