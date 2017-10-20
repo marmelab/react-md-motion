@@ -54,7 +54,7 @@ export default ({
                     }
                 </div>
                 {showActions &&
-                    <div className="actions right appear">
+                    <div className="actions right">
                         <IconButton
                             iconStyle={styles.actions.icon}
                             style={styles.actions.button}

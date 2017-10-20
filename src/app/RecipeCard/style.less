@@ -1,56 +1,50 @@
-@import "../animations.less";
-
-.title{
-    .header{
-        .zoom-font(32px);
+.recipe {
+    .title{
+        img {
+            float: left;
+            margin: 16px;
+            width: 52px;
+        }
     }
 
-    .sub{
-        .zoom-font(18px);
+    .header {
+        img{
+            max-width: 100%;
+        }
+
+        .actions {
+            position: absolute !important;
+            display:flex;
+
+            &.right{
+                right: 0;
+            }
+        }
+
+        .floating{
+            position: absolute !important;
+            display:flex;
+            right: 25px;
+            bottom: -25px;
+        }
     }
-}
 
-.recipe .title img {
-    float: left;
-    margin: 16px;
-    width: 52px;
-}
+    .text{
+        font-size: 16px !important;
+    }
 
-.recipe .header img {
-    width: 100%;
-}
+    .ingredient {
+        display: flex;
+        align-items: center;
+        font-size: 16px;
 
-.recipe .header .actions {
-    position: absolute !important;
-    display:flex;
-}
-
-.recipe .header .actions.right{
-    right: 0;
-}
-
-.recipe .header .floating{
-    position: absolute !important;
-    display:flex;
-    right: 25px;
-    bottom: -25px;
-}
-
-.recipe .text{
-    font-size: 16px !important;
-}
-
-.recipe .ingredient {
-    display: flex;
-    align-items: center;
-    font-size: 16px;
-}
-
-.recipe .ingredient .amount {
-    flex-grow: 0;
-    color: #54BC9E;
-    margin: 16px;
-    font-size: 14px;
-    width: 52px;
-    text-align: center;
+        .amount{
+            flex-grow: 0;
+            color: #54BC9E;
+            margin: 16px;
+            font-size: 14px;
+            width: 52px;
+            text-align: center;
+        }
+    }
 }
