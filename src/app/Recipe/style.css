@@ -3,20 +3,29 @@
     overflow: auto;
 }
 
-.actions {
-    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+.appear{
+    transition: opacity 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
     opacity: 0;
 }
 
-.modal-exit .actions,
-.modal-exit-active .actions {
+.modal-exit-active .appear {
     opacity: 0 !important;
 }
 
-.modal-appear-active .actions,
-.modal-enter-active .actions {
+.modal-enter-active .appear {
     opacity: 1;
 }
+
+
+.zoom-font {
+    transition: font-size 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+}
+
+.modal-enter-active .zoom-font{
+    font-size: attr(zoom-to);
+}
+
+
 
 .floating {
     width: 56px;
@@ -52,30 +61,11 @@
     height: 56px;
 }
 
-.recipe .title{
-    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-}
-
 .modal-appear-active .recipe .title,
 .modal-enter-active .recipe .title{
     margin-top: 25px;
 }
 
-.recipe .title span:first-child,
-.recipe .title span:nth-child(2){
-    transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
-}
-
-.modal-appear-active .recipe .title span:first-child,
-.modal-enter-active .recipe .title span:first-child{
-    font-size: 32px !important;
-}
-
-
-.modal-appear-active .recipe .title span:nth-child(2),
-.modal-enter-active .recipe .title span:nth-child(2){
-    font-size: 18px !important;
-}
 
 .recipe .text{
     margin-left: 84px;

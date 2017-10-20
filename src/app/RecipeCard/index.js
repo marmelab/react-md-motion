@@ -54,7 +54,7 @@ export default ({
                     }
                 </div>
                 {showActions &&
-                    <div className="actions right">
+                    <div className="actions right appear">
                         <IconButton
                             iconStyle={styles.actions.icon}
                             style={styles.actions.button}
@@ -87,7 +87,24 @@ export default ({
         </CardMedia>
         <div className="title">
             <img src={recipe.ingredientsImageUrl} alt="" />
-            <CardTitle title={recipe.name} subtitle={recipe.author} />
+            <CardTitle
+                title={
+                    <span
+                        className="zoom-font"
+                        zoom-to="32px"
+                    >
+                        {recipe.name}
+                    </span>
+                }
+                subtitle={
+                    <span
+                        className="zoom-font"
+                        zoom-to="18px"
+                    >
+                        {recipe.author}
+                    </span>
+                }
+            />
         </div>
         {expanded &&
             <div className="actions">
