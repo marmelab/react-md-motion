@@ -24,8 +24,6 @@ body {
     display:none;
 }
 
-.modal-container.modal-active,
-.modal-container.modal-appear-active,
 .modal-container.modal-enter-active {
     top: 0 !important;
     right: 0 !important;
