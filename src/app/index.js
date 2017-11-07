@@ -16,12 +16,8 @@ class CSSTransition extends OriginalCSSTransition {
 }
 
 class App extends Component {
-    previousView = this.props.location
-    previousLocation = this.props.location
-
-    componentWillUpdate(nextProps) {
+    componentWillReceiveProps(nextProps) {
         this.previousView = this.props.location;
-        this.previousLocation = this.props.location;
     }
 
     render() {
