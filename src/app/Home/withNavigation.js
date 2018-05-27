@@ -1,7 +1,5 @@
 import React from 'react';
 
-import { recipes } from '../data';
-
 export default (Component) => ({history, recipe, ...rest}) => {
     let element = null;
 
